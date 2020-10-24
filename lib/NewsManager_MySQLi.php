@@ -26,7 +26,7 @@ class NewsManager_MySQLi extends NewsManager
      */
     protected function add(News $news)
     {
-        $requete  = $this->db->prepare('INSERT INTO news SET auteur = ?, titre = ?, contenu = ?, dateAjout = NOW(), dateModif = NOW()');
+        $requete = $this->db->prepare('INSERT INTO news SET auteur = ?, titre = ?, contenu = ?, dateAjout = NOW(), dateModif = NOW()');
         $auteur = $news->getAuteur();
         $titre = $news->getTitre();
         $requete->bind_param('sss', $auteur, $titre, $news->getContenu());
@@ -48,7 +48,7 @@ class NewsManager_MySQLi extends NewsManager
      */
     public function delete(int $id)
     {
-        $id = (int) $id;
+        $id = (int)$id;
         $requete = $this->db->prepare('DELETE FROM news WHERE id = ?');
         $requete->bind_param('i', $id);
         $requete->execute();
@@ -63,11 +63,11 @@ class NewsManager_MySQLi extends NewsManager
         $listeNews = array();
         $sql = 'SELECT id, auteur, titre, contenu, DATE_FORMAT (dateAjout, \'le %d/%m/%Y à %Hh%i\') AS dateAjout, DATE_FORMAT (dateModif, \'le %d/%m/%Y à %Hh%i\') AS dateModif FROM news ORDER BY id DESC';
         // on verifie l'integralite des parametres fournis
-        if ($debut != -1 || $limite != -1){
-            $sql .= ' LIMIT '. (int) $limite. ' OFFSET '. (int) $debut;
-         }
+        if ($debut != -1 || $limite != -1) {
+            $sql .= ' LIMIT ' . (int)$limite . ' OFFSET ' . (int)$debut;
+        }
         $requete = $this->db->query($sql);
-        while ($news = $requete->fetch_object('News')){
+        while ($news = $requete->fetch_object('News')) {
             $listeNews[] = $news;
         }
         return $listeNews;
@@ -79,8 +79,8 @@ class NewsManager_MySQLi extends NewsManager
      */
     public function getUnique(int $id)
     {
-        $id = (int) $id;
-        $requete = $this->db->prepare( 'SELECT id, auteur, titre, contenu, DATE_FORMAT (dateAjout, \'le %d/%m/%Y à %Hh%i\') AS dateAjout, DATE_FORMAT (dateModif, \'le %d/%m/%Y à %Hh%i\') AS dateModif FROM news WHERE id = ?');
+        $id = (int)$id;
+        $requete = $this->db->prepare('SELECT id, auteur, titre, contenu, DATE_FORMAT (dateAjout, \'le %d/%m/%Y à %Hh%i\') AS dateAjout, DATE_FORMAT (dateModif, \'le %d/%m/%Y à %Hh%i\') AS dateModif FROM news WHERE id = ?');
         $requete->bind_param('i', $id);
         $requete->execute();
         $requete->bind_result($id, $auteur, $titre, $contenu, $dateAjout, $dateModif);

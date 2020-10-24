@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34c726a5-a460-4434-b262-7b9cccd8c996" name="Default Changelist" comment="" />
+    <list default="true" id="34c726a5-a460-4434-b262-7b9cccd8c996" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/autoload.inc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/footer.inc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/header.inc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/navbar.inc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/show.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DBFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DBFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/News.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/NewsManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/NewsManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/NewsManager_MySQLi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/NewsManager_MySQLi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/NewsManager_PDO.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/NewsManager_PDO.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,19 +26,31 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
   <component name="ProjectId" id="1jJU46kHYR5N6cARPms0WmhzPNG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -32,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603521493437</updated>
-      <workItem from="1603521494545" duration="18264000" />
+      <workItem from="1603521494545" duration="33560000" />
     </task>
     <servers />
   </component>
@@ -61,6 +89,10 @@
       <screen x="0" y="0" width="3200" height="1668" />
     </state>
     <state x="661" y="350" width="277" height="207" key="Github.ShareDialog/0.0.3200.1668@0.0.3200.1668" timestamp="1603553100735" />
+    <state x="480" y="134" width="630" height="638" key="Github.UntrackedFilesDialog" timestamp="1603553109890">
+      <screen x="0" y="0" width="3200" height="1668" />
+    </state>
+    <state x="480" y="134" width="630" height="638" key="Github.UntrackedFilesDialog/0.0.3200.1668@0.0.3200.1668" timestamp="1603553109890" />
     <state width="1067" height="172" key="GridCell.Tab.0.bottom" timestamp="1603524540451">
       <screen x="0" y="0" width="3200" height="1668" />
     </state>
@@ -90,10 +122,14 @@
     </state>
     <state x="599" y="169" width="391" height="575" key="NewPhpClassDialog/0.0.3200.1668@0.0.3200.1668" timestamp="1603552521108" />
     <state x="256" y="102" width="391" height="512" key="NewPhpClassDialog/0.27.1366.741@0.27.1366.741" timestamp="1603545430489" />
-    <state x="289" y="85" width="1022" height="737" key="SettingsEditor" timestamp="1603525766199">
+    <state x="595" y="375" width="399" height="156" key="NewPhpFileDialog" timestamp="1603573961751">
       <screen x="0" y="0" width="3200" height="1668" />
     </state>
-    <state x="289" y="85" width="1022" height="737" key="SettingsEditor/0.0.3200.1668@0.0.3200.1668" timestamp="1603525766199" />
+    <state x="595" y="375" width="399" height="156" key="NewPhpFileDialog/0.0.3200.1668@0.0.3200.1668" timestamp="1603573961751" />
+    <state x="289" y="85" width="1022" height="737" key="SettingsEditor" timestamp="1603566645542">
+      <screen x="0" y="0" width="3200" height="1668" />
+    </state>
+    <state x="289" y="85" width="1022" height="737" key="SettingsEditor/0.0.3200.1668@0.0.3200.1668" timestamp="1603566645542" />
     <state x="0" y="0" width="1600" height="900" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1603524727139">
       <screen x="0" y="0" width="3200" height="1668" />
     </state>

@@ -49,7 +49,7 @@ class NewsManager_PDO extends NewsManager
      */
     public function delete(int $id)
     {
-        $this->db->exec('DELETE FROM news WHERE id = '.(int) $id);
+        $this->db->exec('DELETE FROM news WHERE id = ' . (int)$id);
     }
 
     /**
@@ -60,8 +60,8 @@ class NewsManager_PDO extends NewsManager
     {
         $sql = 'SELECT id, auteur, titre, contenu, DATE_FORMAT (dateAjout, \'le %d/m%/%Y à %Hh%i\') AS dateAjout, DATE_FORMAT (dateModif, \'le %d/m%/%Y à %Hh%i\') AS dateModif FROM news ORDER BY id DESC';
         // on verifie l'integrite des parametres fournis
-        if ($debut != -1 || $limite != -1){
-            $sql .= ' LIMIT '.(int) $limite. 'OFFSET' .(int) $debut;
+        if ($debut != -1 || $limite != -1) {
+            $sql .= ' LIMIT ' . (int)$limite . 'OFFSET' . (int)$debut;
         }
         $requete = $this->db->query($sql);
         $requete->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'News');
@@ -75,12 +75,12 @@ class NewsManager_PDO extends NewsManager
      * @return mixed
      * @see NewsManager::getUnique()
      */
-    public function getUnique ($id)
+    public function getUnique($id)
     {
-        $requete = $this->db->prepare( 'SELECT id, auteur, titre, contenu, DATE_FORMAT (dateAjout, \'le %d/%m/%Y à %Hh%i\') AS dateAjout, DATE_FORMAT (dateModif, \'le %d/%m/%Y à %Hh%i\') AS dateModif FROM news WHERE id = :id');
-        $requete -> bindValue (':id', (int) $id, PDO::PARAM_INT);
-        $requete -> execute ();
-        $requete -> setFetchMode (PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE , 'News');
+        $requete = $this->db->prepare('SELECT id, auteur, titre, contenu, DATE_FORMAT (dateAjout, \'le %d/%m/%Y à %Hh%i\') AS dateAjout, DATE_FORMAT (dateModif, \'le %d/%m/%Y à %Hh%i\') AS dateModif FROM news WHERE id = :id');
+        $requete->bindValue(':id', (int)$id, PDO::PARAM_INT);
+        $requete->execute();
+        $requete->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'News');
         return $requete->fetch();
     }
 

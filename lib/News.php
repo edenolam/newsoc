@@ -15,8 +15,8 @@ class News
      * Constantes relatives aux erreurs possible
      */
     const AUTEUR_INVALIDE = 1;
-    const TITRE_INVALIDE = 2 ;
-    const CONTENU_INVALIDE = 3 ;
+    const TITRE_INVALIDE = 2;
+    const CONTENU_INVALIDE = 3;
 
     /**
      * constructeur de la classe
@@ -24,7 +24,7 @@ class News
      */
     public function __construct($valeurs = array())
     {
-        if (!empty($valeurs)){
+        if (!empty($valeurs)) {
             //si on specifi des valeurs alors on hydrate l'objet
             $this->hydrate($valeurs);
         }
@@ -37,9 +37,10 @@ class News
      */
     public function hydrate(array $donnees)
     {
-        foreach ($donnees as $attribut => $valeur){
-            $methode = 'set'.ucfirst($attribut);
-            if (is_callable(array($this, $methode))){
+
+        foreach ($donnees as $attribut => $valeur) {
+            $methode = 'set' . ucfirst($attribut);
+            if (is_callable(array($this, $methode))) {
                 $this->$methode($valeur);
             }
         }
@@ -65,7 +66,6 @@ class News
     }
 
 
-
     /**
      * @param array $erreurs
      */
@@ -73,7 +73,6 @@ class News
     {
         $this->erreurs = $erreurs;
     }
-
 
 
     public function setId($id): int
@@ -86,9 +85,9 @@ class News
      */
     public function setAuteur($auteur): void
     {
-        if (!is_string($auteur) || empty($auteur)){
+        if (!is_string($auteur) || empty($auteur)) {
             $this->erreurs[] = self::AUTEUR_INVALIDE;
-        }else{
+        } else {
             $this->auteur = $auteur;
         }
     }
@@ -98,9 +97,9 @@ class News
      */
     public function setTitre($titre): void
     {
-        if (!is_string($titre) || empty($titre)){
+        if (!is_string($titre) || empty($titre)) {
             $this->erreurs[] = self::TITRE_INVALIDE;
-        }else{
+        } else {
             $this->titre = $titre;
         }
     }
@@ -110,9 +109,9 @@ class News
      */
     public function setContenu($contenu): void
     {
-        if (!is_string($contenu) || empty($contenu)){
+        if (!is_string($contenu) || empty($contenu)) {
             $this->erreurs[] = self::CONTENU_INVALIDE;
-        }else{
+        } else {
             $this->contenu = $contenu;
         }
     }
@@ -122,7 +121,7 @@ class News
      */
     public function setDateAjout($dateAjout): void
     {
-        if (is_string($dateAjout) && preg_match('le [0-9]{2}/[0-9]{2}/[0-9]{4} à [0-9]{2}h[0-9]{2}', $dateAjout)){
+        if (is_string($dateAjout) && preg_match('le [0-9]{2}/[0-9]{2}/[0-9]{4} à [0-9]{2}h[0-9]{2}', $dateAjout)) {
             $this->dateAjout = $dateAjout;
         }
     }
@@ -132,7 +131,7 @@ class News
      */
     public function setDateModif($dateModif): void
     {
-        if (is_string($dateModif) && preg_match('le [0-9]{2}/[0-9]{2}/[0-9]{4} à [0-9]{2}h[0-9]{2}', $dateModif)){
+        if (is_string($dateModif) && preg_match('le [0-9]{2}/[0-9]{2}/[0-9]{4} à [0-9]{2}h[0-9]{2}', $dateModif)) {
             $this->dateModif = $dateModif;
         }
     }
@@ -165,7 +164,6 @@ class News
     }
 
 
-
     /**
      * @return mixed
      */
@@ -173,7 +171,6 @@ class News
     {
         return $this->titre;
     }
-
 
 
     /**
@@ -185,7 +182,6 @@ class News
     }
 
 
-
     /**
      * @return mixed
      */
@@ -195,7 +191,6 @@ class News
     }
 
 
-
     /**
      * @return mixed
      */
@@ -203,9 +198,6 @@ class News
     {
         return $this->dateModif;
     }
-
-
-
 
 
 }
